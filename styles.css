@@ -60,10 +60,9 @@ body{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:22px 0;  /* gives vertical space for the scaled logo */
+  padding:22px 0;
   gap:14px;
 }
-
 
 /* ✅ Header logo */
 .brand-logo{
@@ -71,7 +70,6 @@ body{
   align-items:center;
   text-decoration:none;
 }
-
 .logo-wrap{
   height: 56px;
   width: 260px;
@@ -79,21 +77,15 @@ body{
   align-items:center;
   overflow:hidden;
 }
-
 .site-logo{
   height: 100%;
   width: auto;
   display:block;
   object-fit: contain;
-
   transform: scale(2.4) translateX(-8%);
   transform-origin: left center;
-
   filter: drop-shadow(0 10px 24px rgba(0,0,0,.18));
 }
-
-
-
 
 .nav{
   display:flex;
@@ -203,13 +195,28 @@ body{
   padding-bottom:14px;
   border-bottom:1px solid rgba(255,255,255,.10);
 }
-.hero-logo-circle{
-  width:56px;height:56px;border-radius:50%;
-  display:grid; place-items:center;
-  background: radial-gradient(circle at 30% 20%, rgba(22,199,214,.95), rgba(47,123,220,.55) 60%, rgba(0,0,0,.25));
-  font-weight:900;
-  color:#03111f;
+.hero-logo-box{
+  width:56px;
+  height:56px;
+  border-radius: 16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  overflow:hidden;
 }
+
+.hero-logo{
+  width:100%;
+  height:100%;
+  object-fit: contain;
+  display:block;
+  transform: scale(1.6);          /* makes the horizontal logo readable in a small box */
+  transform-origin: center;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,.25));
+}
+
 .hero-card-title{font-weight:900}
 .hero-card-sub{color:var(--muted); font-size:13px; margin-top:4px}
 
@@ -399,42 +406,6 @@ input:focus, select:focus, textarea:focus{border-color: rgba(22,199,214,.45)}
 .footer-right a:hover{color:var(--text)}
 .footer-bottom{padding-top:12px; color:var(--muted); font-size:12px}
 
-/* Pricing */
-.pricing-grid{ grid-template-columns: repeat(4, 1fr); }
-.price-card{min-height:auto}
-
-.min-spend{
-  color: var(--text);
-  background: rgba(22,199,214,.12);
-  border: 1px solid rgba(22,199,214,.25);
-  padding: 4px 10px;
-  border-radius: 999px;
-  margin-left: 6px;
-  font-weight: 900;
-  display: inline-block;
-}
-
-.price-table{
-  margin-top: 10px;
-  display: grid;
-  gap: 10px;
-}
-.price-table .row{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding: 10px 12px;
-  border-radius: 14px;
-  background: rgba(0,0,0,.18);
-  border: 1px solid rgba(255,255,255,.10);
-  font-size: 13px;
-  color: var(--muted);
-}
-.price-table .row strong{
-  color: var(--text);
-  font-size: 14px;
-}
-
 /* Gallery (real) */
 .gallery-toolbar{
   display:flex;
@@ -536,20 +507,17 @@ input:focus, select:focus, textarea:focus{border-color: rgba(22,199,214,.45)}
   .why-wrap{grid-template-columns:1fr;}
   .contact-wrap{grid-template-columns:1fr;}
   .contact-cards{grid-template-columns:1fr;}
-  .pricing-grid{grid-template-columns: repeat(2, 1fr);}
   .gallery-grid.real{grid-template-columns: repeat(2, 1fr);}
 
   .logo-wrap{
-  height: 52px;
-  width: 220px;
-}
+    height: 52px;
+    width: 220px;
+  }
 
-.site-logo{
-  transform: scale(2.1) translateX(-8%);
-  transform-origin: left center;
-}
-
-
+  .site-logo{
+    transform: scale(2.1) translateX(-8%);
+    transform-origin: left center;
+  }
 
   .nav{
     position:fixed;
@@ -573,7 +541,6 @@ input:focus, select:focus, textarea:focus{border-color: rgba(22,199,214,.45)}
 }
 
 @media (max-width: 560px){
-  .pricing-grid{grid-template-columns: 1fr;}
   .gallery-grid.real{grid-template-columns: 1fr;}
 }
 

@@ -86,7 +86,7 @@ function validate(data) {
 }
 
 // -------------------------------
-// WhatsApp (prefilled)
+// WhatsApp (prefilled) + Mailto
 // -------------------------------
 
 function refreshWhatsAppBtn() {
@@ -215,6 +215,10 @@ function setImgWithFallback(imgEl, baseName, folder = "img") {
 // Header logo
 const siteLogo = document.getElementById("siteLogo");
 if (siteLogo) setImgWithFallback(siteLogo, "horizontal logo", "img");
+
+// Hero card logo (same as header)
+const heroLogo = document.getElementById("heroLogo");
+if (heroLogo) setImgWithFallback(heroLogo, "horizontal logo", "img");
 
 // ===============================
 // GALLERY

@@ -33,7 +33,6 @@
 
       <nav class="nav" id="nav">
         <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
         <a href="#why">Why Us</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact" class="btn btn-small">Contact</a>
@@ -86,9 +85,10 @@
 
       <div class="hero-card">
         <div class="hero-card-top">
-          <div class="hero-logo-circle">
-            <span>MCS</span>
-          </div>
+          <div class="hero-logo-box" aria-hidden="true">
+  <img id="heroLogo" class="hero-logo" src="" alt="Mukoti Cleaning Services Logo" loading="eager" />
+</div>
+
           <div>
             <div class="hero-card-title">A Touch of Perfection</div>
             <div class="hero-card-sub">Quality cleaning with attention to detail</div>
@@ -168,70 +168,6 @@
           <h3>Custom Packages</h3>
           <p>Combine services for better value. Ideal for move-ins, move-outs, or monthly plans.</p>
           <a class="card-link" href="#contact">Build a package →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing -->
-  <section class="section" id="pricing">
-    <div class="container">
-      <div class="section-head">
-        <h2>Price List</h2>
-        <p>
-          Transparent pricing for common services. <strong class="min-spend">Minimum spend: R750</strong>
-          <span class="small"> (Travel or special conditions may apply depending on location and job requirements.)</span>
-        </p>
-      </div>
-
-      <div class="grid pricing-grid">
-        <article class="card price-card">
-          <h3>Couch Cleaning</h3>
-          <div class="price-table">
-            <div class="row"><span>1 seater</span><strong>R290</strong></div>
-            <div class="row"><span>2 seater</span><strong>R350</strong></div>
-            <div class="row"><span>3 seater</span><strong>R450</strong></div>
-            <div class="row"><span>4 seater</span><strong>R650</strong></div>
-            <div class="row"><span>5 seater</span><strong>R750</strong></div>
-            <div class="row"><span>6 seater</span><strong>R830</strong></div>
-            <div class="row"><span>7 seater</span><strong>R940</strong></div>
-            <div class="row"><span>8 seater</span><strong>R1090</strong></div>
-          </div>
-          <a class="card-link" href="#contact">Request a quote →</a>
-        </article>
-
-        <article class="card price-card">
-          <h3>Mattress Cleaning</h3>
-          <div class="price-table">
-            <div class="row"><span>Single</span><strong>R250</strong></div>
-            <div class="row"><span>3/4 - Double</span><strong>R380</strong></div>
-            <div class="row"><span>Queen</span><strong>R450</strong></div>
-            <div class="row"><span>King</span><strong>R550</strong></div>
-          </div>
-          <a class="card-link" href="#contact">Request a quote →</a>
-        </article>
-
-        <article class="card price-card highlight">
-          <h3>Fitted Carpets</h3>
-          <div class="price-table">
-            <div class="row"><span>Small</span><strong>R350</strong></div>
-            <div class="row"><span>Standard</span><strong>R400</strong></div>
-            <div class="row"><span>Large</span><strong>R550</strong></div>
-            <div class="row"><span>Extra Large</span><strong>R900</strong></div>
-          </div>
-          <a class="card-link" href="#contact">Request a quote →</a>
-        </article>
-
-        <article class="card price-card">
-          <h3>Rug Cleaning</h3>
-          <div class="price-table">
-            <div class="row"><span>Small</span><strong>R250</strong></div>
-            <div class="row"><span>Medium</span><strong>R350</strong></div>
-            <div class="row"><span>Large</span><strong>R400</strong></div>
-            <div class="row"><span>X Large</span><strong>R475</strong></div>
-            <div class="row"><span>XX Large</span><strong>R650</strong></div>
-          </div>
-          <a class="card-link" href="#contact">Request a quote →</a>
         </article>
       </div>
     </div>
@@ -347,7 +283,6 @@
             <input id="name" name="name" type="text" placeholder="Your name" required />
           </div>
 
-          <!-- ✅ NEW: Client Email -->
           <div class="form-row">
             <label for="email">Your Email</label>
             <input id="email" name="email" type="email" placeholder="you@example.com" required />
@@ -384,15 +319,12 @@
           </div>
 
           <div class="form-actions">
-            <!-- ✅ REAL EMAIL SEND -->
             <button class="btn btn-wide" id="sendEmailBtn" type="submit">Send Quote via Email</button>
 
-            <!-- ✅ WhatsApp prefilled -->
             <a class="btn btn-ghost btn-wide" id="whatsappQuoteBtn" href="#" target="_blank" rel="noopener">
               Send via WhatsApp
             </a>
 
-            <!-- ✅ Optional fallback: opens user's email app (prefilled) -->
             <a class="btn btn-ghost btn-wide" id="mailtoBtn" href="#">
               Open Email App (Backup)
             </a>
